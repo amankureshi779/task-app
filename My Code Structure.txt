@@ -1,0 +1,38 @@
+Hello, My name is Aman Kureshi, I have developed this Task-Management Application
+
+Text Editor:- VS Code
+Developed using:- Node.JS, Express.JS, MongoDB Atlas, Mongoose, EJS
+
+Using npm package I installed the packages that are required for this app 
+dependencies:--> dotenv, ejs, express, mongoose
+dev-dependency:--> nodemon 
+
+
+I have MVC (Model view Controll) Architecture for this application
+
+
+For User Interface of this application used embedded javascript
+
+
+I created a config.env file to store my database connection string and password for database connection
+
+I have used mongoose to connect my express application to my mongodb atlas database
+I have used mongoose schema for data validation and creating models
+
+CRUD Operations:---->
+I have used HTTP method and database query to perform Create, Read, update and Delete operations
+
+To create Task ---> using post method
+To read Task  ---> using get method
+To update Task ---> used  get to confirm id and then post to update my data
+To delete Task ----> used get method 
+
+MongoDB Database Query ----->
+find ----> To read all created Task
+findByIdAndUpdate ---> To update Task
+findByIdAndDelete ---> To delete Task
+
+Error Handling:--> I have used try and catch to handle error
+
+Code Redablity:--->
+Separated my code modules(file) according to their reponseblity like main app file separated from server file and other separate file for routes and route handler

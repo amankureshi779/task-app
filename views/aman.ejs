@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Task Management</title>
+    <link rel="stylesheet" href="/static/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Create Your Task</h1>
+      <div class="task">
+        <form action="/" method="post" class="form">
+          <div class="title">
+            <label for="title">Title : </label>
+            <input type="text" name="title" id="title" />
+          </div>
+          <div class="description">
+            <label for="description">Description : </label>
+            <textarea
+              rows="6"
+              cols="30"
+              name="description"
+              id="description"
+            ></textarea>
+          </div>
+          <button type="submit">Add Task</button>
+        </form>
+        <ul class="list">
+          <h2>Your Task Is Displyed Below :</h2>
+          <% newTask.forEach(details => { %>
+          <li class="item">
+            <div class="item-name item-name_1">
+              <span> Title : </span><%= details.title %>
+            </div>
+
+            <div class="item-name item-name_2">
+              <span> Description: </span><%= details.description %>
+            </div>
+
+            <div class="a-btn">
+              <a href="/edit/<%= details._id %>" class="edit">Edit</a>
+              <a href="/remove/<%= details._id  %>" class="remove">Remove</a>
+            </div>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
